@@ -1,0 +1,37 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Validate') {
+            steps {
+                echo 'Building..'
+				sh 'mvn compile'
+            }
+        }
+        stage('Unit Testing') {
+            steps {
+                echo 'Testing..'
+				sh 'mvn test'
+            }
+        }
+		stage('Sonar Analysis') {
+			steps {
+				echo 'Sonar Analysing'
+				sh 'mvn sonar:sonar -Dsonar.host.url=http://54.173.249.10:9000 -Dsonar.login=b0b3887e03b52736ff6d8f70eff476556ee42504'
+			}
+		}
+        stage('Publish Artifacts') {
+            steps {
+                echo 'Publishing....'
+				sh 'mvn deploy'
+            }
+        }
+		stage ('Deploy App') {
+			steps {
+				echo 'Deploying..'
+				sh 'cd /opt/apache-tomcat-7.0.94/webapps'
+				sh 'wget --user admin --password admin123 http://54.173.249.10:8081/nexus/service/local/repositories/releases/content/com/web/cal/WebAppCal/1.3.0/WebAppCal-1.3.0.war'
+			}
+		}
+    }
+}
