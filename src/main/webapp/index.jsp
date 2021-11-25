@@ -7,7 +7,7 @@
 <body>
 <h1 style="text_align=center">Calculator</h1>
       <form action="firstHomePage" method="get">
-<label>First number is :</label>
+<label>First number is : </label>
 <input type="text" name="n1" />
 <br />
 <label>Second number : </label>
