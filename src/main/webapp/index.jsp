@@ -10,7 +10,7 @@
 <label>First number is : </label>
 <input type="text" name="n1" />
 <br />
-<label>Second number : </label>
+<label>Second number is : </label>
 <input type="text" name="n2" />
 <br />
  <div>
