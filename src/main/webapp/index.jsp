@@ -11,7 +11,6 @@
 <input type="text" name="n1" />
 <br />
 <br />
-<br />
 <label>Second number is : </label>
 <input type="text" name="n2" />
 <br />
