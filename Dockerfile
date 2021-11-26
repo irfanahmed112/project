@@ -8,5 +8,5 @@ RUN mvn clean
 RUN mvn package
 
 #Base Image - tomcat
-FROM tomcat:9.0-slim
+FROM tomcat
 COPY --from=build-step /app/target/WebAppCal-1.4.0.war /usr/local/tomcat/webapps/ROOT.war
