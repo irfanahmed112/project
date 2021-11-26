@@ -22,7 +22,7 @@
 </label>
  
 <label>
-<input type="radio" name="r1" value="sub" />difference
+<input type="radio" name="r1" value="sub" />Difference
 <br />
 </label>
        
