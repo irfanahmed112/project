@@ -1,5 +1,5 @@
 #Base Image - maven
-FROM maven:3-jdk-11-slim as build-step
+FROM maven:3-jdk-11 as build-step
 RUN mkdir /app
 WORKDIR /app
 COPY pom.xml /app
