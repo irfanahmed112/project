@@ -11,7 +11,7 @@
 <input type="text" name="n1" />
 <br />
 <br />
-<label>Second number is : </label>
+<label>Second 2nd number is : </label>
 <input type="text" name="n2" />
 <br />
  <div>
